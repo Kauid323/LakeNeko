@@ -110,12 +110,25 @@ _sms.name = 'send_message_send'
 _sms_data = _sms.nested_type.add()
 _sms_data.name = 'Data'
 _f = _sms_data.field.add(); _f.name = 'text'; _f.number = 1; _f.label = 1; _f.type = 9
+_f = _sms_data.field.add(); _f.name = 'image'; _f.number = 9; _f.label = 1; _f.type = 9
+
+_sms_media = _sms.nested_type.add()
+_sms_media.name = 'Media'
+_f = _sms_media.field.add(); _f.name = 'file_key'; _f.number = 1; _f.label = 1; _f.type = 9
+_f = _sms_media.field.add(); _f.name = 'file_hash'; _f.number = 2; _f.label = 1; _f.type = 9
+_f = _sms_media.field.add(); _f.name = 'file_type'; _f.number = 3; _f.label = 1; _f.type = 9
+_f = _sms_media.field.add(); _f.name = 'image_height'; _f.number = 5; _f.label = 1; _f.type = 3
+_f = _sms_media.field.add(); _f.name = 'image_width'; _f.number = 6; _f.label = 1; _f.type = 3
+_f = _sms_media.field.add(); _f.name = 'file_size'; _f.number = 7; _f.label = 1; _f.type = 3
+_f = _sms_media.field.add(); _f.name = 'file_key2'; _f.number = 8; _f.label = 1; _f.type = 9
+_f = _sms_media.field.add(); _f.name = 'file_suffix'; _f.number = 9; _f.label = 1; _f.type = 9
 
 _f = _sms.field.add(); _f.name = 'msg_id'; _f.number = 2; _f.label = 1; _f.type = 9
 _f = _sms.field.add(); _f.name = 'chat_id'; _f.number = 3; _f.label = 1; _f.type = 9
 _f = _sms.field.add(); _f.name = 'chat_type'; _f.number = 4; _f.label = 1; _f.type = 4
 _f = _sms.field.add(); _f.name = 'data'; _f.number = 5; _f.label = 1; _f.type = 11; _f.type_name = '.send_message_send.Data'
 _f = _sms.field.add(); _f.name = 'content_type'; _f.number = 6; _f.label = 1; _f.type = 4
+_f = _sms.field.add(); _f.name = 'media'; _f.number = 9; _f.label = 1; _f.type = 11; _f.type_name = '.send_message_send.Media'
 
 _sm = _fd.message_type.add()
 _sm.name = 'send_message'

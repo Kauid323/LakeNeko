@@ -421,7 +421,7 @@ class Api:
         req.chat_type = chat_type
         req.content_type = 2 # Image
 
-        req.data.image = f"expression/{img_meta['file_key']}"
+        req.data.image = f"{img_meta['file_key']}"
 
         req.media.file_key = img_meta['file_key']
         req.media.file_hash = img_meta['file_hash']
